@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 import { Text, View } from "react-native";
-import { Button, Card, Title, Paragraph } from "react-native-paper";
+import { List, Card, Title, Paragraph } from "react-native-paper";
 
 export default function HomeScreen() {
   return (
@@ -21,6 +21,18 @@ export default function HomeScreen() {
         </Card.Content>
         <Card.Cover source={{ uri: "https://picsum.photos/700" }} />
       </Card>
+
+      <List.Section title="Frequently Asked Questions">
+        <List.Accordion title="What is this for?">
+          <List.Item title="We celebrate the birth of potatoes." />
+        </List.Accordion>
+        <List.Accordion title="When will this be?">
+          <List.Item title="Whenever this pandemic is over." />
+        </List.Accordion>
+        <List.Accordion title="Where will this be?">
+          <List.Item title="Ireland" />
+        </List.Accordion>
+      </List.Section>
     </View>
   );
 }
