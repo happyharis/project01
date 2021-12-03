@@ -34,8 +34,8 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Contact" component={ContactScreen} />
         <Tab.Screen name="Events" component={EventsScreen} />
+        <Tab.Screen name="Contact" component={ContactScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
