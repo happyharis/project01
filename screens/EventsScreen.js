@@ -14,7 +14,26 @@ function EventsScreen({ navigation }) {
   );
 }
 
-function EventsDetails() {
+function EventsDetails({ navigation }) {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "lightyellow",
+      }}
+    >
+      <Text>Events Details!</Text>
+      <Button
+        onPress={() => navigation.navigate("EventsProfile")}
+        title="Go to Profile"
+      />
+    </View>
+  );
+}
+
+function EventsProfile({ navigation }) {
   return (
     <View
       style={{
@@ -24,7 +43,8 @@ function EventsDetails() {
         backgroundColor: "lightgreen",
       }}
     >
-      <Text>Events Details!</Text>
+      <Text>Events Profile!</Text>
+      <Button onPress={() => navigation.popToTop()} title="Go Home" />
     </View>
   );
 }
@@ -36,6 +56,7 @@ export default function EventsStack() {
     <Stack.Navigator>
       <Stack.Screen name="EventsHome" component={EventsScreen} />
       <Stack.Screen name="EventsDetails" component={EventsDetails} />
+      <Stack.Screen name="EventsProfile" component={EventsProfile} />
     </Stack.Navigator>
   );
 }
